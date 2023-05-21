@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/main_bg_color">
+
+        <TextView
+            android:id="@+id/tv_all_restaurants"
+            style="@style/home_horizontal_rv_header_title_style"
+            android:text="@string/all_restaurants"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_all_restaurants_show_all"
+            style="@style/home_rv_show_all_text_style"
+            android:text="@string/show_all"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_all_restaurants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_all_restaurants" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_all_restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="50dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_all_restaurants"
+            tools:itemCount="7"
+            tools:listitem="@layout/custom_all_restaurants_list_item_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
